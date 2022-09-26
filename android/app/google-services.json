@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "621679216977",
+    "project_id": "blaze-d28fb",
+    "storage_bucket": "blaze-d28fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621679216977:android:73c540bd165870727c2b70",
+        "android_client_info": {
+          "package_name": "com.example.blaze"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621679216977-1jdh0vjt5rjpo63im6tp58adllumtled.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7m4usZh6KP-zCx24Gz8jtKOKvdc3bhmQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621679216977-1jdh0vjt5rjpo63im6tp58adllumtled.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
