@@ -6,16 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() async {
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,7 +24,7 @@ class MyApp extends StatelessWidget {
 
 class BalanceCardView extends StatelessWidget {
   BalanceCardView({Key? key}) : super(key: key);
-  var wallet = List.generate(
+  final wallet = List.generate(
       4,
       (index) => ChainModel(
           name: index == 0

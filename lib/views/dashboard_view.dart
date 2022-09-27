@@ -22,44 +22,6 @@ class DashboardView extends ConsumerWidget {
   }
 }
 
-class _WalletHero extends ConsumerWidget {
-  const _WalletHero({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    ref.watch(getFakeWallets).when(
-        data: (wallets) {
-          return DropdownButton<int>(
-              items: wallets.map((item) {
-                return DropdownMenuItem(
-                    value: wallets.indexOf(item),
-                    child: Card(
-                      child: ListTile(
-                        leading: Text((wallets.indexOf(item) + 1).toString()),
-                        title: Text(item.address),
-                        subtitle: Text(item.balance),
-                        trailing: Text(item.chain),
-                      ),
-                    ));
-              }).toList(),
-              onChanged: (index) {});
-        },
-        error: (Object error, StackTrace? stackTrace) {},
-        loading: () {
-          return const CircularProgressIndicator.adaptive();
-        });
-    return Column(
-      children: const [
-        // ListTile(
-        //   leading: DropdownButton(items: const [], onChanged: (changed) {}),
-        // ),
-        // Text(),
-        // Text()
-      ],
-    );
-  }
-}
-
 final getWallets = FutureProvider((ref) async {});
 final getFakeWallets = FutureProvider((ref) async {
   return [
